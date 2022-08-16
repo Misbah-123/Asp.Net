@@ -1,0 +1,28 @@
+﻿@model IEnumerable<SearchbyAjax.Models.info>
+
+@{
+    ViewBag.Title = "Searchpeople";
+}
+
+<h2>Searchpeople</h2>
+
+@foreach(var i in Model)
+{
+   
+        <tr>
+            <td>@i.Id</td>
+            <td>@i.Name</td>
+            <td>@i.Age</td>
+            <td>@i.Class</td>
+            <td>@i.Contact</td>
+
+
+
+        </tr>
+   
+
+
+
+
+
+}

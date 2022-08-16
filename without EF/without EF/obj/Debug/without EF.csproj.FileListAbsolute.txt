@@ -1,0 +1,2 @@
+D:\ASPWithMVC\without EF\without EF\obj\Debug\without EF.csprojAssemblyReference.cache
+D:\ASPWithMVC\without EF\without EF\obj\Debug\without EF.csproj.CoreCompileInputs.cache

@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "TempDataIndex";
+}
+
+<h2>TempDataIndex</h2>
+
+
+
+<h1>@TempData["Name"]</h1>
+<h1>@TempData["Class"]</h1>
+<h1>@TempData["Age"]</h1>
+
+@foreach (var item in (List<string>)TempData["obj"])
+{
+    <li>
+
+        @item
+    </li>
+}

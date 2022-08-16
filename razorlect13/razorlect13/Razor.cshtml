@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+
+        @helper inlinehelper(string[] abc)
+        {
+
+            <ol>
+                @foreach (string a in abc)
+                {
+
+
+                    <li>@a</li>
+
+
+                }
+
+            </ol>
+
+
+        }
+        @inlinehelper(new string[] { "Irha", "Umaima", "Aaira" });
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "ViewDataIndex";
+}
+
+<h2>ViewDataIndex</h2>
+
+
+<h1>@ViewData["Name"]</h1>
+<h1>@ViewData["Class"]</h1>
+<h1>@ViewData["Age"]</h1>
+
+@foreach (var item in (List<string>) ViewData["obj"])
+{
+    <li>
+
+        @item
+    </li>
+}

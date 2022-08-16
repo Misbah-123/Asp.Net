@@ -1,0 +1,29 @@
+﻿@model authentication.Models.Signup
+
+@{
+    ViewBag.Title = "userDashboard";
+}
+
+@*@if(Request.Cookies != null)
+    {
+    <h1>welcome @Request.Cookies["email"].Value.ToString()</h1>
+    }*@
+
+@if (Session != null)
+{
+
+    <h1>welcome session @Session.ToString()   </h1>
+
+
+    <h2>
+
+        @Html.ActionLink("loggout", "logout", User);
+    </h2>
+
+
+
+
+}
+
+<h2>userDashboard</h2>
+

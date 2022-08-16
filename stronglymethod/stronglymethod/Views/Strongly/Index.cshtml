@@ -1,0 +1,46 @@
+﻿@model stronglymethod.Models.Info
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<body>
+    <div>
+        @using (@Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+        <table>
+            <tr>
+                <td>@Html.LabelFor(m => Model.Id)</td>
+                <td>@Html.TextBoxFor(m => Model.Id)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => Model.Name)</td>
+                <td>@Html.TextBoxFor(m => Model.Name)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => Model.Gender)</td>
+                <td>
+                    Male:@Html.RadioButtonFor(m => m.Gender, "Male", new { @checked = "checked" })
+                    Female:@Html.RadioButtonFor(m => m.Gender, "Female", true)
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => Model.City)</td>
+                <td>@Html.TextBoxFor(m => Model.City)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => Model.Address)</td>
+                <td>@Html.EditorFor(m => Model.Address)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => Model.Designation)</td>
+                <td>@Html.TextBoxFor(m => Model.Designation)</td>
+            </tr>
+
+            <tr><td></td><td><input type="submit" value="Submit" /></td></tr>
+        </table>
+        }
+    </div>
+</body>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rolesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="rolet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="role" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Class" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="usert">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Pass" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK__rolet__UserId__145C0A3F">
+    <End Role="usert" Type="Self.usert" Multiplicity="0..1" />
+    <End Role="rolet" Type="Self.rolet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usert">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="rolet">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="rolesModelStoreContainer">
+    <EntitySet Name="rolet" EntityType="Self.rolet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usert" EntityType="Self.usert" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__rolet__UserId__145C0A3F" Association="Self.FK__rolet__UserId__145C0A3F">
+      <End Role="usert" EntitySet="usert" />
+      <End Role="rolet" EntitySet="rolet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
