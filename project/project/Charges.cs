@@ -21,7 +21,7 @@ namespace project
             OffnameLb1.Text = Login.OffName;
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-DLBFHJF;Initial Catalog=policestation;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-DLBFHJF;Initial Catalog=policemangment;Integrated Security=True");
         private void ShowCharges()
         {
             Con.Open();
@@ -80,7 +80,12 @@ namespace project
             CaseheadingTb.Text = "";
             ChargesheetTb.Text = "";
             RemarkTb.Text = "";
+            Witnesstb.Text = "";
+            Optiontb.Text = "";
+            textBox1.Text = "";
+            Prooftb.Text = "";
             CaseCb.SelectedIndex = -1;
+           
             Key = 0;
 
 
@@ -88,7 +93,7 @@ namespace project
 
         private void RecordBtn_Click(object sender, EventArgs e)
         {
-            if (CaseheadingTb.Text == "" || ChargesheetTb.Text == "" || RemarkTb.Text == "")
+            if (CaseheadingTb.Text == "" || ChargesheetTb.Text == "" || RemarkTb.Text == "" || Witnesstb.Text == "" ||Optiontb.Text ==""|| textBox1.Text == "" ||Prooftb.Text =="" )
             {
                 MessageBox.Show("Missing information!!!");
             }
@@ -97,12 +102,18 @@ namespace project
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into chargetb1(CaseCode,CaseHeading,ChargeSheet,Remarks,polname)values(@CC,@CH,@CS,@CRem,@polN)", Con);
+                    SqlCommand cmd = new SqlCommand("insert into chargetb1(CaseCode,CaseHeading,ChargeSheet,Remarks,Witness,Arrested,Date,AccusedNam,Proof,Officer)values(@CC,@CH,@CS,@CRem,@W,@Ar,@D,@AN,@P,@polN)", Con);
                     cmd.Parameters.AddWithValue("@CC", CaseCb.SelectedValue.ToString());
                     cmd.Parameters.AddWithValue("@CH", CaseheadingTb.Text);
                     cmd.Parameters.AddWithValue("@CS", ChargesheetTb.Text);
                     cmd.Parameters.AddWithValue("@CRem", RemarkTb.Text);
+                    cmd.Parameters.AddWithValue("@W", Witnesstb.Text);
+                    cmd.Parameters.AddWithValue("@Ar", Optiontb.Text);
+                    cmd.Parameters.AddWithValue("@D", Date.Value.Date);
+                    cmd.Parameters.AddWithValue("@AN", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@P", Prooftb.Text);
                     cmd.Parameters.AddWithValue("@polN", OffnameLb1.Text);
+
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Charge Recorded");
@@ -130,6 +141,14 @@ namespace project
             CaseheadingTb.Text = ChargeDVG.SelectedRows[0].Cells[2].Value.ToString();
             ChargesheetTb.Text = ChargeDVG.SelectedRows[0].Cells[3].Value.ToString();
             RemarkTb.Text = ChargeDVG.SelectedRows[0].Cells[4].Value.ToString();
+            Witnesstb.Text = ChargeDVG.SelectedRows[0].Cells[5].Value.ToString();
+            Optiontb.Text = ChargeDVG.SelectedRows[0].Cells[6].Value.ToString();
+            Date.Text = ChargeDVG.SelectedRows[0].Cells[7].Value.ToString();
+            textBox1.Text = ChargeDVG.SelectedRows[0].Cells[8].Value.ToString();
+            Prooftb.Text = ChargeDVG.SelectedRows[0].Cells[9].Value.ToString();
+
+
+
             if (CaseheadingTb.Text == "")
             {
                 Key = 0;
@@ -143,7 +162,7 @@ namespace project
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            if (CaseheadingTb.Text == "" || ChargesheetTb.Text == "" || RemarkTb.Text == "")
+            if (CaseheadingTb.Text == "" || ChargesheetTb.Text == "" || RemarkTb.Text == "" || Witnesstb.Text == "" ||Optiontb.Text == "" || textBox1.Text == "" || Prooftb.Text == "")
             {
                 MessageBox.Show("Missing information!!!");
             }
@@ -152,13 +171,20 @@ namespace project
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("update chargetb1 Set CaseCode=@CC,CaseHeading=@CH,ChargeSheet=@CS,Remarks=@CRem,polname=@polN where CrNum = @CrKey", Con);
+                    SqlCommand cmd = new SqlCommand("update chargetb1 Set CaseCode=@CC,CaseHeading=@CH,ChargeSheet=@CS,Remarks=@CRem," +
+                        "Witness=@W,Arrested=@Ar,Date=@D,AccusedNam=@AN,Proof=@P,Officer=@polN where CrNum = @CrKey", Con);
                     cmd.Parameters.AddWithValue("@CC", CaseCb.SelectedValue.ToString());
                     cmd.Parameters.AddWithValue("@CH", CaseheadingTb.Text);
                     cmd.Parameters.AddWithValue("@CS", ChargesheetTb.Text);
                     cmd.Parameters.AddWithValue("@CRem", RemarkTb.Text);
-                    cmd.Parameters.AddWithValue("@polN", OffnameLb1.Text);
                     cmd.Parameters.AddWithValue("@CrKey", Key);
+                    cmd.Parameters.AddWithValue("@W", Witnesstb.Text);
+                    cmd.Parameters.AddWithValue("@Ar", Optiontb.Text);
+                    cmd.Parameters.AddWithValue("@D", Date.Value.Date);
+                    cmd.Parameters.AddWithValue("@AN", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@P", Prooftb.Text);
+                    cmd.Parameters.AddWithValue("@polN", OffnameLb1.Text);
+
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Charge Updated!!!!");
@@ -273,6 +299,27 @@ namespace project
             Login obj = new Login();
             obj.Show();
             this.Hide();
+        }
+
+        private void bunifuThinButton21_Click_1(object sender, EventArgs e)
+        {
+         
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

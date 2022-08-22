@@ -17,7 +17,7 @@ namespace project
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-DLBFHJF;Initial Catalog=policestation;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-DLBFHJF;Initial Catalog=policemangment;Integrated Security=True");
         public static string OffName;
         private void Login_Load(object sender, EventArgs e)
         {
@@ -26,6 +26,7 @@ namespace project
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
 
         }
 
@@ -71,7 +72,7 @@ namespace project
 
         private void LoginBtn_Click_1(object sender, EventArgs e)
         {
-            {
+{
                 if (RoleCb.SelectedIndex == -1)
                 {
 
@@ -130,6 +131,16 @@ namespace project
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaPictureBox2_Click(object sender, EventArgs e)
         {
 
         }

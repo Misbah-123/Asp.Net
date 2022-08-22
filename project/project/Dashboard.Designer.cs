@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel8 = new System.Windows.Forms.Panel();
-            this.LogoutBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
             this.CrLb1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -74,6 +72,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel12 = new System.Windows.Forms.Panel();
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -94,6 +93,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -104,41 +104,14 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel8.Controls.Add(this.LogoutBtn);
             this.panel8.Controls.Add(this.doubleBitmapControl1);
             this.panel8.Controls.Add(this.CrLb1);
             this.panel8.Controls.Add(this.label7);
-            this.panel8.Location = new System.Drawing.Point(12, 378);
+            this.panel8.Location = new System.Drawing.Point(20, 482);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(189, 147);
+            this.panel8.Size = new System.Drawing.Size(189, 105);
             this.panel8.TabIndex = 7;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
-            // 
-            // LogoutBtn
-            // 
-            this.LogoutBtn.ActiveBorderThickness = 1;
-            this.LogoutBtn.ActiveCornerRadius = 20;
-            this.LogoutBtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.LogoutBtn.ActiveForecolor = System.Drawing.Color.White;
-            this.LogoutBtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.LogoutBtn.BackColor = System.Drawing.Color.DarkBlue;
-            this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
-            this.LogoutBtn.ButtonText = "Login";
-            this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoutBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutBtn.ForeColor = System.Drawing.Color.SeaGreen;
-            this.LogoutBtn.IdleBorderThickness = 1;
-            this.LogoutBtn.IdleCornerRadius = 20;
-            this.LogoutBtn.IdleFillColor = System.Drawing.Color.White;
-            this.LogoutBtn.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.LogoutBtn.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.LogoutBtn.Location = new System.Drawing.Point(14, 96);
-            this.LogoutBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.LogoutBtn.Name = "LogoutBtn";
-            this.LogoutBtn.Size = new System.Drawing.Size(141, 46);
-            this.LogoutBtn.TabIndex = 4;
-            this.LogoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
             // 
             // doubleBitmapControl1
             // 
@@ -152,24 +125,24 @@
             // CrLb1
             // 
             this.CrLb1.AutoSize = true;
-            this.CrLb1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrLb1.Font = new System.Drawing.Font("Vogue", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CrLb1.ForeColor = System.Drawing.Color.White;
             this.CrLb1.Location = new System.Drawing.Point(40, 57);
             this.CrLb1.Name = "CrLb1";
-            this.CrLb1.Size = new System.Drawing.Size(95, 25);
+            this.CrLb1.Size = new System.Drawing.Size(92, 20);
             this.CrLb1.TabIndex = 1;
             this.CrLb1.Text = "Number";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Vogue", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 21);
+            this.label7.Location = new System.Drawing.Point(40, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(183, 25);
+            this.label7.Size = new System.Drawing.Size(110, 20);
             this.label7.TabIndex = 0;
-            this.label7.Text = "CRIMINAL CASES";
+            this.label7.Text = "FIR CASES";
             // 
             // bunifuElipse2
             // 
@@ -183,10 +156,10 @@
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(207, 24);
+            this.panel1.Font = new System.Drawing.Font("Signatype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(247, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(964, 636);
+            this.panel1.Size = new System.Drawing.Size(1062, 639);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -198,17 +171,18 @@
             this.panel10.Controls.Add(this.label13);
             this.panel10.Controls.Add(this.CaseLb1);
             this.panel10.Controls.Add(this.label15);
-            this.panel10.Location = new System.Drawing.Point(211, 315);
+            this.panel10.Location = new System.Drawing.Point(316, 386);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(292, 147);
+            this.panel10.Size = new System.Drawing.Size(325, 160);
             this.panel10.TabIndex = 6;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::project.Properties.Resources._case;
-            this.pictureBox8.Location = new System.Drawing.Point(31, 23);
+            this.pictureBox8.Location = new System.Drawing.Point(22, 23);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(88, 90);
+            this.pictureBox8.Size = new System.Drawing.Size(108, 104);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 2;
             this.pictureBox8.TabStop = false;
@@ -217,27 +191,30 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(155, 94);
+            this.label13.Font = new System.Drawing.Font("Vogue", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(187, 99);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 19);
+            this.label13.Size = new System.Drawing.Size(63, 17);
             this.label13.TabIndex = 5;
             this.label13.Text = "Cases";
             // 
             // CaseLb1
             // 
             this.CaseLb1.AutoSize = true;
-            this.CaseLb1.Location = new System.Drawing.Point(152, 64);
+            this.CaseLb1.Font = new System.Drawing.Font("Vogue", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CaseLb1.Location = new System.Drawing.Point(179, 66);
             this.CaseLb1.Name = "CaseLb1";
-            this.CaseLb1.Size = new System.Drawing.Size(71, 19);
+            this.CaseLb1.Size = new System.Drawing.Size(83, 17);
             this.CaseLb1.TabIndex = 4;
             this.CaseLb1.Text = "NUMBER";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(152, 18);
+            this.label15.Font = new System.Drawing.Font("handwriting-draft_free-version", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(177, 23);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 19);
+            this.label15.Size = new System.Drawing.Size(98, 27);
             this.label15.TabIndex = 3;
             this.label15.Text = "CASES";
             // 
@@ -249,17 +226,17 @@
             this.panel11.Controls.Add(this.label17);
             this.panel11.Controls.Add(this.OffLb1);
             this.panel11.Controls.Add(this.label19);
-            this.panel11.Location = new System.Drawing.Point(414, 89);
+            this.panel11.Location = new System.Drawing.Point(577, 84);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(281, 172);
+            this.panel11.Size = new System.Drawing.Size(317, 179);
             this.panel11.TabIndex = 6;
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::project.Properties.Resources.officer;
-            this.pictureBox9.Location = new System.Drawing.Point(32, 25);
+            this.pictureBox9.Location = new System.Drawing.Point(16, 18);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(87, 97);
+            this.pictureBox9.Size = new System.Drawing.Size(116, 133);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 3;
             this.pictureBox9.TabStop = false;
@@ -267,27 +244,30 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(141, 86);
+            this.label17.Font = new System.Drawing.Font("Vogue", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(187, 110);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(79, 19);
+            this.label17.Size = new System.Drawing.Size(95, 17);
             this.label17.TabIndex = 5;
             this.label17.Text = "OFFICERS";
             // 
             // OffLb1
             // 
             this.OffLb1.AutoSize = true;
-            this.OffLb1.Location = new System.Drawing.Point(138, 57);
+            this.OffLb1.Font = new System.Drawing.Font("Vogue", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OffLb1.Location = new System.Drawing.Point(187, 77);
             this.OffLb1.Name = "OffLb1";
-            this.OffLb1.Size = new System.Drawing.Size(71, 19);
+            this.OffLb1.Size = new System.Drawing.Size(83, 17);
             this.OffLb1.TabIndex = 4;
             this.OffLb1.Text = "NUMBER";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(138, 18);
+            this.label19.Font = new System.Drawing.Font("handwriting-draft_free-version", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(159, 18);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(71, 19);
+            this.label19.Size = new System.Drawing.Size(131, 27);
             this.label19.TabIndex = 3;
             this.label19.Text = "OFFICER";
             // 
@@ -299,7 +279,7 @@
             this.panel9.Controls.Add(this.CrimLb1);
             this.panel9.Controls.Add(this.label10);
             this.panel9.Controls.Add(this.pictureBox7);
-            this.panel9.Location = new System.Drawing.Point(42, 89);
+            this.panel9.Location = new System.Drawing.Point(68, 91);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(281, 172);
             this.panel9.TabIndex = 2;
@@ -307,36 +287,39 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(138, 101);
+            this.label12.Font = new System.Drawing.Font("Vogue", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(140, 105);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 19);
+            this.label12.Size = new System.Drawing.Size(85, 20);
             this.label12.TabIndex = 5;
             this.label12.Text = "PERSON";
             // 
             // CrimLb1
             // 
             this.CrimLb1.AutoSize = true;
-            this.CrimLb1.Location = new System.Drawing.Point(138, 65);
+            this.CrimLb1.Font = new System.Drawing.Font("Vogue", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrimLb1.Location = new System.Drawing.Point(140, 75);
             this.CrimLb1.Name = "CrimLb1";
-            this.CrimLb1.Size = new System.Drawing.Size(71, 19);
+            this.CrimLb1.Size = new System.Drawing.Size(92, 20);
             this.CrimLb1.TabIndex = 4;
             this.CrimLb1.Text = "NUMBER";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(138, 18);
+            this.label10.Font = new System.Drawing.Font("handwriting-draft_free-version", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(110, 26);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 19);
+            this.label10.Size = new System.Drawing.Size(161, 27);
             this.label10.TabIndex = 3;
             this.label10.Text = "ARRESTED";
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::project.Properties.Resources.criminal;
-            this.pictureBox7.Location = new System.Drawing.Point(16, 26);
+            this.pictureBox7.Location = new System.Drawing.Point(3, 26);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(88, 96);
+            this.pictureBox7.Size = new System.Drawing.Size(101, 118);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 2;
             this.pictureBox7.TabStop = false;
@@ -344,10 +327,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(26, 15);
+            this.label9.Font = new System.Drawing.Font("Vogue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(38, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 23);
+            this.label9.Size = new System.Drawing.Size(120, 22);
             this.label9.TabIndex = 1;
             this.label9.Text = "ANALYTICS";
             // 
@@ -364,23 +347,25 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("handwriting-draft_free-version", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(55, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 27);
             this.label4.TabIndex = 1;
             this.label4.Text = "Cases";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(12, 197);
+            this.panel5.Location = new System.Drawing.Point(13, 218);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(183, 43);
+            this.panel5.Size = new System.Drawing.Size(196, 40);
             this.panel5.TabIndex = 4;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -389,7 +374,7 @@
             this.pictureBox3.Image = global::project.Properties.Resources.criminal;
             this.pictureBox3.Location = new System.Drawing.Point(3, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox3.Size = new System.Drawing.Size(36, 42);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -398,23 +383,25 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("handwriting-draft_free-version", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(55, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 26);
+            this.label3.Size = new System.Drawing.Size(121, 26);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Criminals";
+            this.label3.Text = "FIR";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(12, 150);
+            this.panel4.Location = new System.Drawing.Point(13, 163);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(183, 41);
+            this.panel4.Size = new System.Drawing.Size(195, 45);
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -430,23 +417,25 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("handwriting-draft_free-version", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(55, 3);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 26);
             this.label6.TabIndex = 1;
             this.label6.Text = "Logout";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Location = new System.Drawing.Point(12, 296);
+            this.panel7.Location = new System.Drawing.Point(13, 340);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(183, 44);
+            this.panel7.Size = new System.Drawing.Size(196, 44);
             this.panel7.TabIndex = 6;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
@@ -462,23 +451,25 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("handwriting-draft_free-version", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(54, 3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 26);
             this.label5.TabIndex = 1;
             this.label5.Text = "Charges";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(12, 246);
+            this.panel6.Location = new System.Drawing.Point(13, 275);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(183, 44);
+            this.panel6.Size = new System.Drawing.Size(196, 44);
             this.panel6.TabIndex = 5;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
@@ -494,13 +485,14 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("handwriting-draft_free-version", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(55, 11);
+            this.label1.Location = new System.Drawing.Point(53, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 26);
+            this.label1.Size = new System.Drawing.Size(125, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Dashboard";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
@@ -508,9 +500,9 @@
             this.panel2.BackColor = System.Drawing.Color.DarkBlue;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(12, 55);
+            this.panel2.Location = new System.Drawing.Point(16, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(183, 40);
+            this.panel2.Size = new System.Drawing.Size(193, 40);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -538,24 +530,26 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(12, 101);
+            this.panel3.Location = new System.Drawing.Point(13, 114);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(183, 43);
+            this.panel3.Size = new System.Drawing.Size(196, 43);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label16
             // 
-            this.label16.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("handwriting-draft_free-version", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(54, 6);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(112, 26);
             this.label16.TabIndex = 2;
             this.label16.Text = "Officers";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // bunifuElipse3
@@ -563,19 +557,29 @@
             this.bunifuElipse3.ElipseRadius = 30;
             this.bunifuElipse3.TargetControl = this.panel9;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel12.Controls.Add(this.panel2);
+            this.panel12.Controls.Add(this.panel8);
+            this.panel12.Controls.Add(this.panel7);
+            this.panel12.Controls.Add(this.panel6);
+            this.panel12.Controls.Add(this.panel5);
+            this.panel12.Controls.Add(this.panel4);
+            this.panel12.Controls.Add(this.panel3);
+            this.panel12.Location = new System.Drawing.Point(12, 50);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(229, 636);
+            this.panel12.TabIndex = 8;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 658);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(1335, 693);
+            this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -583,6 +587,7 @@
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -609,6 +614,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -617,7 +623,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private System.Windows.Forms.Panel panel8;
-        private Bunifu.Framework.UI.BunifuThinButton2 LogoutBtn;
         private BunifuAnimatorNS.DoubleBitmapControl doubleBitmapControl1;
         private System.Windows.Forms.Label CrLb1;
         private System.Windows.Forms.Label label7;
@@ -658,5 +663,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox7;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private System.Windows.Forms.Panel panel12;
     }
 }

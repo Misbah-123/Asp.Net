@@ -20,7 +20,7 @@ namespace project
             GetCriminals();
             OffNameTb.Text = Login.OffName;
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-DLBFHJF;Initial Catalog=policestation;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-DLBFHJF;Initial Catalog=policemangment;Integrated Security=True");
         private void ShowCases()
         {
             Con.Open();
@@ -272,5 +272,34 @@ namespace project
         {
 
         }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton21_Click_1(object sender, EventArgs e)
+        {
+            SqlDataAdapter adapt;
+            DataTable ds;
+
+            Con.Open();
+            adapt = new SqlDataAdapter("select * from Casetb1 where Ctype like '" + cTextBox1.Text + "%'", Con);
+            ds = new DataTable();
+            adapt.Fill(ds);
+            CasesDVG.DataSource = ds;
+            Con.Close();
+
+        }
+
+        private void Srh(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+    }

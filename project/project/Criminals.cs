@@ -19,7 +19,8 @@ namespace project
             ShowCriminals();
             OffNameLb1.Text = Login.OffName;
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-DLBFHJF;Initial Catalog=policestation;Integrated Security=True");
+        //global connection
+        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-DLBFHJF;Initial Catalog=policemangment;Integrated Security=True");
         private void ShowCriminals()
         {
             Con.Open();
@@ -39,7 +40,7 @@ namespace project
 
         private void RecordBtn_Click(object sender, EventArgs e)
         {
-            if (NameTb.Text == "" || AddressTb.Text == "" || ActivityTb.Text == "")
+            if (NameTb.Text == "" || AddressTb.Text == "" || ActivityTb.Text == "" || ReportTb.Text == "" || DisTb.Text == "")
             {
                 MessageBox.Show("Missing information!!!");
             }
@@ -48,10 +49,14 @@ namespace project
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into criminaltb1(CrName,CrAdd,CrActivities)values(@CN,@CA,@CrA)", Con);
+                    SqlCommand cmd = new SqlCommand("insert into criminaltb1(CrName,CrAdd,CrActivities,Report,District)values(@CN,@CA,@CrA,@Rp,@Dis)", Con);
                     cmd.Parameters.AddWithValue("@CN", NameTb.Text);
                     cmd.Parameters.AddWithValue("@CA", AddressTb.Text);
                     cmd.Parameters.AddWithValue("@CrA", ActivityTb.Text);
+                    cmd.Parameters.AddWithValue("@Rp", ReportTb.Text);
+                    cmd.Parameters.AddWithValue("@Dis", DisTb.Text);
+
+
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Criminal Recorded");
                     Con.Close();
@@ -71,6 +76,10 @@ namespace project
             NameTb.Text = CriminalDVG.SelectedRows[0].Cells[1].Value.ToString();
             AddressTb.Text = CriminalDVG.SelectedRows[0].Cells[2].Value.ToString();
             ActivityTb.Text = CriminalDVG.SelectedRows[0].Cells[3].Value.ToString();
+            ReportTb.Text = CriminalDVG.SelectedRows[0].Cells[4].Value.ToString();
+            DisTb.Text = CriminalDVG.SelectedRows[0].Cells[5].Value.ToString();
+
+
 
             if (NameTb.Text == "")
             {
@@ -85,7 +94,7 @@ namespace project
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            if (NameTb.Text == "" || AddressTb.Text == "" || ActivityTb.Text == "")
+            if (NameTb.Text == "" || AddressTb.Text == "" || ActivityTb.Text == "" || ReportTb.Text == "" || DisTb.Text == "")
             {
                 MessageBox.Show("Missing information!!!");
             }
@@ -94,11 +103,15 @@ namespace project
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("update criminaltb1 Set CrName=@CN,CrAdd=@CA,CrActivities=@CrA where CrCode = @CKey", Con);
+                    SqlCommand cmd = new SqlCommand("update criminaltb1 Set CrName=@CN,CrAdd=@CA,CrActivities=@CrA,Report=@Rp,District=@Dis where CrCode = @CKey", Con);
                     cmd.Parameters.AddWithValue("@CKey", Key);
                     cmd.Parameters.AddWithValue("@CN", NameTb.Text);
                     cmd.Parameters.AddWithValue("@CA", AddressTb.Text);
                     cmd.Parameters.AddWithValue("@CrA", ActivityTb.Text);
+                    cmd.Parameters.AddWithValue("@Rp", ReportTb.Text);
+                    cmd.Parameters.AddWithValue("@Dis", DisTb.Text);
+
+
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Criminal Recorded");
                     Con.Close();
@@ -118,8 +131,10 @@ namespace project
             NameTb.Text = "";
             AddressTb.Text = "";
             ActivityTb.Text = "";
+            ReportTb.Text = "";
+            DisTb.Text = "";
             Key = 0;
-            
+
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
@@ -135,7 +150,7 @@ namespace project
                     Con.Open();
                     SqlCommand cmd = new SqlCommand("delete from criminaltb1 where CrCode = @CKey", Con);
                     cmd.Parameters.AddWithValue("@CKey", Key);
-                  
+
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Criminal deleted");
                     Con.Close();
@@ -151,28 +166,23 @@ namespace project
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
-                   }
+        }
 
         private void label5_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-                 }
+        }
 
 
         private void Criminals_Load(object sender, EventArgs e)
@@ -223,6 +233,26 @@ namespace project
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton21_Click_1(object sender, EventArgs e)
+        {
+
+            SqlDataAdapter adapt;
+            DataTable dt;
+
+            Con.Open();
+            adapt = new SqlDataAdapter("select * from criminaltb1 where CrCode like '" + cTextBox1.Text + "%'", Con);
+            dt = new DataTable();
+            adapt.Fill(dt);
+            CriminalDVG.DataSource = dt;
+            Con.Close();
 
         }
     }

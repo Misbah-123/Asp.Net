@@ -1,5 +1,6 @@
-create database policestation
-use policestation
+create database policemangment
+
+use policemangment
 
 Create table Casetb1(
 CNum int identity(1,1) primary key not null,
@@ -41,7 +42,11 @@ CaseHeading varchar(150),
 ChargeSheet varchar(230),
 Remarks varchar(230),
 polcode int not null,
-polname varchar(504)
+polname varchar(504),
 CONSTRAINT [FK2] FOREIGN KEY ([polcode]) REFERENCES [policetb1]([Empcode])
 
 );
+
+truncate table chargetb1
+
+

@@ -32,9 +32,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>case %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>C:\Users\misbah\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="ChreneLib">
+      <HintPath>C:\Users\misbah\Downloads\ChreneLib_dll\ChreneLib.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
       <HintPath>C:\Users\misbah\Downloads\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
@@ -219,6 +225,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp_Image_2022-07-27_at_7.42.28_AM-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="case %281%29.ico" />
+    <Content Include="log-in.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

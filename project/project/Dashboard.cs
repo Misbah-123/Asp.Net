@@ -21,7 +21,7 @@ namespace project
             CountCriminals();
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-DLBFHJF;Initial Catalog=policestation;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-DLBFHJF;Initial Catalog=policemangment;Integrated Security=True");
         private void CountOfficers()
         {
             Con.Open();
@@ -187,6 +187,11 @@ namespace project
             Criminals obj = new Criminals();
             obj.Show();
             this.Hide();
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
